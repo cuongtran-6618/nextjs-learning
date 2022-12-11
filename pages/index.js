@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,8 +13,16 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read <Link href="/posts/first-post">this page!</Link>
         </h1>
+        <div className="Profile">
+          <Image
+            src="/images/profile.png"
+            height={144}
+            width={180}
+            alt="Cuong Tran"
+          />
+        </div>
 
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
@@ -55,7 +65,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
@@ -111,5 +121,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
